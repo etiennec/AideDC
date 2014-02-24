@@ -1,0 +1,61 @@
+﻿# Fichier de configuration des chemins HTML d'Aide Dilicom 2.
+# $i$ sert à désigner le ième élément
+# $j$ sert à désigner le i+1ème élément
+
+# Chemins Divers
+# Detecte que l'utilisateur est déjà connecté
+detection_de_connexion=//a[@title='Déconnexion']
+# Detecte qu'il reste des pages à afficher dans la fiche de détail des commandes
+detection_detail_commande_pages_restantes=//div[@class='contenu_page contenu_recherche']/table/tr/td/span[count(a)>1]/a[last()][contains(@href,'commande')]
+# Detection de l'existence d'une ligne
+detection_existence_ligne=//table[@class='liste_resultats']/tbody/tr[$j$]/td[1][not(@colspan)]
+
+
+# Ecran de connexion
+detection_de_chargement_de_la_page_de_connexion=//input[@type='submit']
+# ID du champ code
+id_champ_code=code_form
+# ID du champ mot de passe
+id_champ_mot_de_passe=pwd_form
+# ID du bouton OK
+id_bouton_ok=btn_form02
+
+# Page de détail d'un Article
+id_champ_ean=ean
+code_ean_html=//div[@id='maincontent'][div/div/table/tbody[@class='book_row']/tr/td/a[starts-with(@href,'/catalogue/detail_article_consultation.html?ean=$ean$')]][div[@class='breaker']]
+article.Titre=//a[starts-with(@href, '/catalogue/detail_article_consultation.html')]/strong
+article.Auteur=//td[contains(@class, 'fiche_info')]
+article.Ean=//tbody[@class='book_row']/tr[2]/td[2]
+article.Collection=//td[contains(@class, 'fiche_info')]
+article.Editeur=//td[contains(@class, 'fiche_info')]
+article.Distributeur=//td[contains(@class, 'fiche_info')]
+article.DateParution.date=//tbody[@class='book_row']/tr[2]/td[2]
+article.Prix.prix=//tbody[@class='book_row']/tr[1]/td[3]/span
+article.Disponibilite.ouinon=//tbody[@class='book_row']/tr[1]/td[3]
+article.RemplacePar=//div[@class='remplacee']/a[2]
+
+# Suivi des commandes - liste des commandes
+resume_commande.Destinataire=//table[@class='liste_resultats']/tbody/tr[$j$]/td[1]
+resume_commande.Traitee_le.date=//table[@class='liste_resultats']/tbody/tr[$j$]/td[2]
+resume_commande.Remise_le.date=//table[@class='liste_resultats']/tbody/tr[$j$]/td[3]
+resume_commande.Reference=//table[@class='liste_resultats']/tbody/tr[$j$]/td[4]
+resume_commande.Lignes=//table[@class='liste_resultats']/tbody/tr[$j$]/td[5]
+resume_commande.Exemplaires=//table[@class='liste_resultats']/tbody/tr[$j$]/td[6]
+resume_commande.Lien_detail=//table[@class='liste_resultats']/tbody/tr[$j$]/td[7]/a/@href
+
+# Suivi des commandes - Ligne (+ récapitulatif de la commande)
+ligne.Destinataire=//table[@class='liste_informations']/tbody/tr[1]/td[2]
+ligne.Traitee_le.date=//table[@class='liste_informations']/tbody/tr[2]/td[2]
+ligne.Remise_le.date=//table[@class='liste_informations']/tbody/tr[3]/td[2]
+ligne.Reference=//table[@class='liste_informations']/tbody/tr[4]/td[2]/span
+ligne.Mode_expedition=//table[@class='liste_informations']/tbody/tr[5]/td[2]
+ligne.Reference_operation=//table[@class='liste_informations']/tbody/tr[6]/td[2]
+ligne.Ean=//table[@class='liste_resultats']/tbody/tr[$j$]/td[1]
+ligne.Titre=//table[@class='liste_resultats']/tbody/tr[$j$]/td[2]
+ligne.Editeur=//table[@class='liste_resultats']/tbody/tr[$j$]/td[3]
+ligne.Prix.prix=//table[@class='liste_resultats']/tbody/tr[$j$]/td[4]
+ligne.Reference_ligne=//table[@class='liste_resultats']/tbody/tr[$j$]/td[5]
+ligne.Quantite=//table[@class='liste_resultats']/tbody/tr[$j$]/td[6]
+ligne.Prix_total_ligne.prix=//table[@class='liste_resultats']/tbody/tr[$j$]/td[7]
+ligne.Quantite_total_commande=//table[@class='liste_resultats']/tbody/tr[last()]/td[2]/span
+ligne.Prix_total_commande.prix=//table[@class='liste_resultats']/tbody/tr[last()]/td[3]/span

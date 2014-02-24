@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  
+  <appender name="Network" type="log4net.Appender.RollingFileAppender">
+    <file value="logs/network.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="5MB" />
+    <maxSizeRollBackups value="1" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{HH:mm:ss,fff} %level %thread %logger - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="Parsing" type="log4net.Appender.RollingFileAppender">
+    <file value="logs/parsing.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="5MB" />
+    <maxSizeRollBackups value="1" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{HH:mm:ss,fff} %level %thread %logger - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="Html" type="log4net.Appender.RollingFileAppender">
+    <file value="logs/html.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="10MB" />
+    <maxSizeRollBackups value="1" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value=" %date{HH:mm:ss,fff} %level %thread %logger ############################## START PAGE ######################## %newline%message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="Root" type="log4net.Appender.RollingFileAppender">
+    <file value="logs/aide_dilicom.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="5MB" />
+    <maxSizeRollBackups value="1" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{HH:mm:ss,fff} %level %thread %logger - %message%newline" />
+    </layout>
+  </appender>
+
+  <root>
+    <level value="DEBUG" />
+    <appender-ref ref="Root" />
+  </root>
+  <logger name="Aide_Dilicom3.Network" additivity="false">
+    <level value="DEBUG" />
+    <appender-ref ref="Network" />
+  </logger>
+  <logger name="Aide_Dilicom3.Parsing" additivity="false">
+    <level value="DEBUG" />
+    <appender-ref ref="Parsing" />
+  </logger>
+  <logger name="Aide_Dilicom3.Network.Html" additivity="false">
+    <level value="DEBUG" />
+    <appender-ref ref="Html" />
+  </logger>
+</log4net>

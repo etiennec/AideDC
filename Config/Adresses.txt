@@ -1,0 +1,4 @@
+﻿connexion=/connexion.html
+login=/j_acegi_security_check
+catalogue=/catalogue/consulter_articles.html?newsearch=true
+liste_commandes=/commande/suivi.html
