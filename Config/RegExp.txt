@@ -1,6 +1,5 @@
 # Ce fichier contient le code supplémentaire pour identifier les informations dans le code HTML
 
-article.Auteur=Auteur : (?<info>.*)Editeur :
 article.Ean=EAN :(?<info>\d+)
 article.Editeur=Editeur :(?<info>.*)Distributeur :
 article.Distributeur=Distributeur :(?<info>.*)Collection :

@@ -35,7 +35,14 @@ namespace Aide_Dilicom3.Network
 
         public static WebBrowser Browser
         {
-            set { browser = value; }
+            set 
+            { 
+                browser = value;
+                if (browser != null)
+                {
+                    browser.ScriptErrorsSuppressed = true;
+                }
+            }
         }
 
         public enum RequestType
@@ -147,15 +154,7 @@ namespace Aide_Dilicom3.Network
         }
 
 
-        /// <summary>
-        /// The navigate method sends specified type of request to the PPM Server with all the required parameters
-        /// and returns the result as an XmlDocument.
-        /// </summary>
-        /// <param name="RequestType">The type of request to send</param>
-        /// <param name="strPostData">The http request parameters</param>
-        /// <returns>The response from the PPM server as a XmlDocument</returns>
-        /// <exception cref="LoginFailedException">If the connection to PPM Server worked but the login failed.</exception>
-        /// <exception cref="ConnectionFailedException">If the connection to PPM Server failed.</exception>
+
         static public XmlDocument retrieve(RequestType reqType, StringDictionary parameters)
         {
             logger.Debug("Starting Request for type: " + reqType.ToString());

@@ -97,21 +97,6 @@ namespace Aide_Dilicom3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>&lt;?xml version=""1.0"" encoding=""utf-16""?&gt;&lt;Param xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema""&gt;  &lt;name&gt;Date Import&lt;/name&gt;  &lt;formula&gt;$date$ - $heure$&lt;/formula&gt;  &lt;enabled&gt;true&lt;/enabled&gt;&lt;/Param&gt;</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection EanAdditionalColumns {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["EanAdditionalColumns"]));
-            }
-            set {
-                this["EanAdditionalColumns"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(",")]
         public string CsvSeparator {
             get {
@@ -206,6 +191,21 @@ namespace Aide_Dilicom3.Properties {
         public string EanToken {
             get {
                 return ((string)(this["EanToken"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>&lt;?xml version=""1.0"" encoding=""utf-16""?&gt;&lt;Param xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema""&gt;  &lt;name&gt;Date Import&lt;/name&gt;  &lt;formula&gt;$date$ - $heure$&lt;/formula&gt;  &lt;enabled&gt;true&lt;/enabled&gt;&lt;/Param&gt;</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection EanAdditionalColumns {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["EanAdditionalColumns"]));
+            }
+            set {
+                this["EanAdditionalColumns"] = value;
             }
         }
     }

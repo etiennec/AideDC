@@ -34,6 +34,8 @@ namespace Aide_Dilicom3.Network.Actions
             if (doc == null || doc.SelectSingleNode(eanFieldXPath) == null)
             {
                 navigate(catalogueUrl, eanFieldXPath);
+                // Wait also for the search button to appear
+                navigate(null, XPath.get("bouton_rechercher"));
             }
 
             // Input EAN code & Press Search
