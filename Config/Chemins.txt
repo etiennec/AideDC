@@ -25,14 +25,14 @@ id_champ_ean=quickSearch
 bouton_rechercher=//input[@value='RECHERCHER']
 code_ean_html=//tbody[@class='book_row']/tr/td/a[starts-with(@href,'/catalogue/detail_article_consultation.html?ean=$ean$')]
 article.Titre=//a[starts-with(@href, '/catalogue/detail_article_consultation.html')]/strong
-article.Auteur=//label[text()='Auteur :']/following-sibling::div[1]/text()
+article.Auteur=//tbody[@class='book_row']//label[text()='Auteur :']/following-sibling::*[1]//text()
 article.Ean=//tbody[@class='book_row']/tr[2]/td[2]
-article.Collection=//td[contains(@class, 'fiche_info')]
-article.Editeur=//td[contains(@class, 'fiche_info')]
-article.Distributeur=//td[contains(@class, 'fiche_info')]
-article.DateParution.date=//tbody[@class='book_row']/tr[2]/td[2]
-article.Prix.prix=//tbody[@class='book_row']/tr[1]/td[3]/span
-article.Disponibilite.ouinon=//tbody[@class='book_row']/tr[1]/td[3]
+article.Collection=//tbody[@class='book_row']//label[text()='Collection :']/following-sibling::*[1]//text()
+article.Editeur=//tbody[@class='book_row']//label[text()='Editeur :']/following-sibling::*[1]//text()
+article.Distributeur=//tbody[@class='book_row']//label[text()='Distributeur :']/following-sibling::*[1]//text()
+article.DateParution.date=//tbody[@class='book_row']//label[text()='Date de parution :']/following-sibling::*[1]//text()
+article.Prix.prix=//tbody[@class='book_row']/tr/td/span[@class='texte_rouge']/text()
+article.Disponibilite.ouinon=//tbody[@class='book_row']/tr[1]/td[5]
 article.RemplacePar=//div[@class='remplacee']/a[2]
 
 # Suivi des commandes - liste des commandes

@@ -1,10 +1,6 @@
 # Ce fichier contient le code supplémentaire pour identifier les informations dans le code HTML
 
 article.Ean=EAN :(?<info>\d+)
-article.Editeur=Editeur :(?<info>.*)Distributeur :
-article.Distributeur=Distributeur :(?<info>.*)Collection :
-article.Collection=Collection :(?<info>.*)
-article.DateParution.date=Date de parution :(?<info>\d+/\d+/\d+)
 article.Disponibilite.ouinon=€ (?<info>.+)
 article.Prix.prix=(?<info>\d+[\.|,]\d+)
 article.RemplacePar=(?<info>\d+)
