@@ -211,6 +211,8 @@ namespace Aide_Dilicom3.Network
                     return new ConnectAction(browser, getUrlForRequest(reqType, param), Aide_Dilicom3.Properties.Settings.Default.Login, Aide_Dilicom3.Properties.Settings.Default.Password);
                 case RequestType.EAN_DETAILS:
                     return new EanDetailsAction(browser, getUrlForRequest(reqType, param), param[NetworkConstants.PARAM_EAN_EAN]);
+                case RequestType.COMMANDS_LIST:
+                    return new ListCommandsAction(browser, getUrlForRequest(reqType, param), param[NetworkConstants.PARAM_LIST_PAGE]); 
                 default:
                     logger.Error("Type de requête inconnu: " + reqType);
                     throw new Exception("Unknown Request Type");

@@ -14,7 +14,9 @@ namespace Aide_Dilicom3.Parsing
         private static ILog logger = LogUtils.getLogger("Aide_Dilicom3.Parsing");
 
         /// <summary>
-        /// Parse a number CommandsCount of commands from the response. CommandsCount should never be higher than 20 in theory.
+        /// Parse a number CommandsCount of commands from the response. 
+        /// Never returns more than CommandsCount ResumeCommande, but returns less 
+        /// if there's less than that in the document to parse.
         /// </summary>
         /// <param name="doc"></param>
         /// <param name="CommandsCount"></param>
@@ -27,7 +29,14 @@ namespace Aide_Dilicom3.Parsing
             {
                 ResumeCommande commande = new ResumeCommande();
 
-                commande.data = ParsingUtils.getData(commande.getKey(), doc, i);
+                // We need to increment i because the first tr row is for table headers.
+                commande.data = ParsingUtils.getData(commande.getKey(), doc, i+1);
+
+                if (commande.data.Count == 0)
+                {
+                    logger.Debug("No more results found to parse in Resume Commande after " + results.Count + " commandes");
+                    return results;
+                }
 
                 results.Add(commande);
 
