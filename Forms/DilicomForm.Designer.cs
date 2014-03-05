@@ -101,12 +101,12 @@ namespace Aide_Dilicom3.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.NavigoTab = new System.Windows.Forms.TabPage();
+            this.UrlText = new System.Windows.Forms.TextBox();
+            this.GoButton = new System.Windows.Forms.Button();
+            this.MyWebBrowser = new System.Windows.Forms.WebBrowser();
             this.saveCsvFile = new System.Windows.Forms.SaveFileDialog();
             this.openEanFile = new System.Windows.Forms.OpenFileDialog();
-            this.NavigoTab = new System.Windows.Forms.TabPage();
-            this.MyWebBrowser = new System.Windows.Forms.WebBrowser();
-            this.GoButton = new System.Windows.Forms.Button();
-            this.UrlText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersListDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commande)).BeginInit();
             this.MainTabs.SuspendLayout();
@@ -372,8 +372,8 @@ namespace Aide_Dilicom3.Forms
             this.EanListGridView.Name = "EanListGridView";
             this.EanListGridView.Size = new System.Drawing.Size(248, 447);
             this.EanListGridView.TabIndex = 0;
-            this.EanListGridView.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.EanListGridView_RowValidating);
             this.EanListGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.EanListGridView.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.EanListGridView_RowValidating);
             // 
             // eanCodeDataGridViewTextBoxColumn
             // 
@@ -823,17 +823,6 @@ namespace Aide_Dilicom3.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Code d\'acc¨¨s :";
             // 
-            // saveCsvFile
-            // 
-            this.saveCsvFile.FileName = "commandes.csv";
-            this.saveCsvFile.InitialDirectory = ".\\export";
-            // 
-            // openEanFile
-            // 
-            this.openEanFile.FileName = "*.*";
-            this.openEanFile.InitialDirectory = ".";
-            this.openEanFile.Multiselect = true;
-            // 
             // NavigoTab
             // 
             this.NavigoTab.Controls.Add(this.UrlText);
@@ -846,15 +835,14 @@ namespace Aide_Dilicom3.Forms
             this.NavigoTab.Text = "Navigo";
             this.NavigoTab.UseVisualStyleBackColor = true;
             // 
-            // MyWebBrowser
+            // UrlText
             // 
-            this.MyWebBrowser.Location = new System.Drawing.Point(0, 39);
-            this.MyWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.MyWebBrowser.Name = "MyWebBrowser";
-            this.MyWebBrowser.Size = new System.Drawing.Size(968, 491);
-            this.MyWebBrowser.TabIndex = 0;
-            this.MyWebBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.MyWebBrowser_Navigating);
-            this.MyWebBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.MyWebBrowser_Navigated);
+            this.UrlText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.UrlText.Location = new System.Drawing.Point(4, 4);
+            this.UrlText.Name = "UrlText";
+            this.UrlText.Size = new System.Drawing.Size(853, 29);
+            this.UrlText.TabIndex = 2;
             // 
             // GoButton
             // 
@@ -867,14 +855,26 @@ namespace Aide_Dilicom3.Forms
             this.GoButton.UseVisualStyleBackColor = true;
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
-            // UrlText
+            // MyWebBrowser
             // 
-            this.UrlText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.UrlText.Location = new System.Drawing.Point(4, 4);
-            this.UrlText.Name = "UrlText";
-            this.UrlText.Size = new System.Drawing.Size(853, 29);
-            this.UrlText.TabIndex = 2;
+            this.MyWebBrowser.Location = new System.Drawing.Point(0, 39);
+            this.MyWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.MyWebBrowser.Name = "MyWebBrowser";
+            this.MyWebBrowser.Size = new System.Drawing.Size(968, 491);
+            this.MyWebBrowser.TabIndex = 0;
+            this.MyWebBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.MyWebBrowser_Navigated);
+            this.MyWebBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.MyWebBrowser_Navigating);
+            // 
+            // saveCsvFile
+            // 
+            this.saveCsvFile.FileName = "commandes.csv";
+            this.saveCsvFile.InitialDirectory = ".\\export";
+            // 
+            // openEanFile
+            // 
+            this.openEanFile.FileName = "*.*";
+            this.openEanFile.InitialDirectory = ".";
+            this.openEanFile.Multiselect = true;
             // 
             // DilicomForm
             // 
@@ -885,8 +885,8 @@ namespace Aide_Dilicom3.Forms
             this.Name = "DilicomForm";
             this.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.Text = "Aide Dilicom";
-            this.Load += new System.EventHandler(this.ApplicationLoad);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ApplicationClosed);
+            this.Load += new System.EventHandler(this.ApplicationLoad);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersListDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commande)).EndInit();
             this.MainTabs.ResumeLayout(false);

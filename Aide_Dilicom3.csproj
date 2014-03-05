@@ -105,6 +105,7 @@
     <Compile Include="Network\Actions\EanDetailsAction.cs" />
     <Compile Include="Network\ConnectionFailedException.cs" />
     <Compile Include="Network\Actions\BrowserAction.cs" />
+    <Compile Include="Network\Actions\ListCommandsAction.cs" />
     <Compile Include="Network\LoginFailedException.cs" />
     <Compile Include="Network\NetworkConstants.cs" />
     <Compile Include="Network\NetworkingException.cs" />

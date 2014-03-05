@@ -101,18 +101,19 @@ namespace Aide_Dilicom3.Data
 
             while (CommandsCount > 0)
             {
-                // Prepare parameter of EAN
                 StringDictionary param = new StringDictionary();
                 param.Add(NetworkConstants.PARAM_LIST_PAGE, pageIndex.ToString());
 
-                //Send request to the EAN Query page
+                //Send request to the Command list page
                 XmlDocument doc = NetworkInterface.retrieve(NetworkInterface.RequestType.COMMANDS_LIST, param);
 
-                results.AddRange(Parsing.ResumeCommandeParser.parseCommandsListResponse(doc, (CommandsCount > 20 ? 20 : CommandsCount)));
+                List<ResumeCommande> resumeCommandes = Parsing.ResumeCommandeParser.parseCommandsListResponse(doc, CommandsCount);
+
+                results.AddRange(resumeCommandes);
 
                 ++pageIndex;
 
-                CommandsCount -= 20;
+                CommandsCount -= resumeCommandes.Count;
             }
 
             e.Result = results;
