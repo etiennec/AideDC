@@ -32,7 +32,7 @@ namespace Aide_Dilicom3.Parsing
                 // We need to increment i because the first tr row is for table headers.
                 commande.data = ParsingUtils.getData(commande.getKey(), doc, i+1);
 
-                if (commande.data.Count == 0)
+                if (!commande.hasData())
                 {
                     logger.Debug("No more results found to parse in Resume Commande after " + results.Count + " commandes");
                     return results;

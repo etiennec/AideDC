@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Data\DataIntegrator.cs" />
     <Compile Include="Network\Actions\ConnectAction.cs" />
+    <Compile Include="Network\Actions\CommandDetailsAction.cs" />
     <Compile Include="Network\Actions\EanDetailsAction.cs" />
     <Compile Include="Network\ConnectionFailedException.cs" />
     <Compile Include="Network\Actions\BrowserAction.cs" />

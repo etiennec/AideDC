@@ -8,6 +8,8 @@ using System.Xml;
 using System.Windows.Forms;
 using System.ComponentModel;
 using Aide_Dilicom3.Parsing;
+using log4net;
+using Aide_Dilicom3.Util;
 
 namespace Aide_Dilicom3.Data
 {
@@ -21,6 +23,8 @@ namespace Aide_Dilicom3.Data
     /// </summary>
     public static class DataIntegrator
     {
+        private static ILog logger = LogUtils.getLogger("Aide_Dilicom3.Data");
+
         public static void getEanDetailsAsync(List<string> eanCodes, RunWorkerCompletedEventHandler workFinishedEventHandler, ProgressChangedEventHandler progressReportedEventHandler)
         {
             BackgroundWorker eanGetterWorker = new BackgroundWorker();
@@ -111,6 +115,12 @@ namespace Aide_Dilicom3.Data
 
                 results.AddRange(resumeCommandes);
 
+                if (resumeCommandes.Count == 0)
+                {
+                    logger.Debug("Asked for "+CommandsCount+" commandes, but retrieved none on page "+pageIndex+". Finishing commands retrieval early.");
+                    break;
+                }
+
                 ++pageIndex;
 
                 CommandsCount -= resumeCommandes.Count;
@@ -147,7 +157,7 @@ namespace Aide_Dilicom3.Data
             {
                 // TODO retrieve the page
                 StringDictionary sd = new StringDictionary();
-                sd.Add("url", url);
+                sd.Add(NetworkConstants.PARAM_COMMAND_DETAILS_RELATIVE_URL, url);
                 XmlDocument doc = NetworkInterface.retrieve(NetworkInterface.RequestType.COMMAND_DETAIL, sd);
 
                 results.AddRange(DetailCommandeParser.parseCommandDetails(doc));
@@ -158,8 +168,8 @@ namespace Aide_Dilicom3.Data
                 {
                     ++page;
                     sd = new StringDictionary();
-                    sd.Add("url", url);
-                    sd.Add("p", page.ToString());
+                    sd.Add(NetworkConstants.PARAM_COMMAND_DETAILS_RELATIVE_URL, url);
+                    sd.Add(NetworkConstants.PARAM_LIST_PAGE, page.ToString());
                     doc = NetworkInterface.retrieve(NetworkInterface.RequestType.COMMAND_DETAIL, sd);
                     results.AddRange(DetailCommandeParser.parseCommandDetails(doc));
                 }

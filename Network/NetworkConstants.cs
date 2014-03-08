@@ -49,5 +49,8 @@ namespace Aide_Dilicom3.Network
         // COMMANDS LIST REQUEST
         public const string PARAM_LIST_PAGE = "p";
 
+        // COMMAND DETAIL URL
+        public const string PARAM_COMMAND_DETAILS_RELATIVE_URL = "commandURL";
+
     }
 }

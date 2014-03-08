@@ -81,10 +81,10 @@ namespace Aide_Dilicom3.Network
             {
                 case RequestType.COMMAND_DETAIL:
                     // The full url is in the "url" parameter, and there is potentially a "p" parameter with the page number.
-                    url = relativeToAbsoluteUrl(parameters["url"]);
-                    if (parameters.ContainsKey("p"))
+                    url = relativeToAbsoluteUrl(parameters[NetworkConstants.PARAM_COMMAND_DETAILS_RELATIVE_URL]);
+                    if (parameters.ContainsKey(NetworkConstants.PARAM_LIST_PAGE))
                     {
-                        url += "&p=" + parameters["p"];
+                        url += "&p=" + parameters[NetworkConstants.PARAM_LIST_PAGE];
                     }
                     break;
                 case RequestType.COMMANDS_LIST: // The page number is passed in GET, in the URL
@@ -213,6 +213,8 @@ namespace Aide_Dilicom3.Network
                     return new EanDetailsAction(browser, getUrlForRequest(reqType, param), param[NetworkConstants.PARAM_EAN_EAN]);
                 case RequestType.COMMANDS_LIST:
                     return new ListCommandsAction(browser, getUrlForRequest(reqType, param), param[NetworkConstants.PARAM_LIST_PAGE]); 
+                case RequestType.COMMAND_DETAIL:
+                    return new CommandDetailsAction(browser, getUrlForRequest(reqType, param));
                 default:
                     logger.Error("Type de requête inconnu: " + reqType);
                     throw new Exception("Unknown Request Type");

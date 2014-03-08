@@ -25,5 +25,18 @@ namespace Aide_Dilicom3.Data
             else
                 return "";
         }
+
+        public bool hasData()
+        {
+            foreach (String value in data.Values)
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

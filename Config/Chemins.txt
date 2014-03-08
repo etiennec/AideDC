@@ -6,7 +6,7 @@
 # Detecte que l'utilisateur est déjà connecté
 detection_de_connexion=//a[@title='Déconnexion']
 # Detecte qu'il reste des pages à afficher dans la fiche de détail des commandes
-detection_detail_commande_pages_restantes=//div[@class='contenu_page contenu_recherche']/table/tr/td/span[count(a)>1]/a[last()][contains(@href,'commande')]
+detection_detail_commande_pages_restantes=//div[@class='contenu_page contenu_recherche']//span[count(a)>1]/a[last()][contains(@href,'commande')]
 # Detection de l'existence d'une ligne
 detection_existence_ligne=//table[@class='liste_resultats']/tbody/tr[$j$]/td[1][not(@colspan)]
 
