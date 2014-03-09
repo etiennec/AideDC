@@ -129,15 +129,16 @@ namespace Aide_Dilicom3.Parsing
                 Regex regExp = RegExp.get(Key);
                 if (!(regExp == null))
                 {
-                    Match match = regExp.Match(value);
-                    if (match.Success)
-                    {
-                        value = match.Result("${info}");
-                    }
-                    else
+                    String valueMatch = RegExp.matchRegexInfo(regExp, value);
+
+                    if (valueMatch == null)
                     {
                         LogUtils.warn("RegEx match failed for regexp " + regExp.ToString() + " on value " + value);
                         value = "";
+                    }
+                    else
+                    {
+                        value = valueMatch;
                     }
                 }
 

@@ -18,6 +18,22 @@ namespace Aide_Dilicom3.Config
             XpathManager = new PropertiesResourceManager("RegExp");
         }
 
+        public static String matchRegexInfo(Regex regex, String text)
+        {
+            String matchValue = null;
+
+            if (regex != null)
+            {
+                Match match = regex.Match(text);
+                if (match.Success)
+                {
+                    matchValue = match.Result("${info}");
+                }
+            }
+
+            return matchValue;
+        }
+
         public static Regex get(string key)
         {
             if (repo.ContainsKey(key))

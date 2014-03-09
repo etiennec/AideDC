@@ -9,7 +9,12 @@ detection_de_connexion=//a[@title='Déconnexion']
 detection_detail_commande_pages_restantes=//div[@class='contenu_page contenu_recherche']//span[count(a)>1]/a[last()][contains(@href,'commande')]
 # Detection de l'existence d'une ligne
 detection_existence_ligne=//table[@class='liste_resultats']/tbody/tr[$j$]/td[1][not(@colspan)]
-
+# Detection du numéro de commande pour le détail d'une commande
+detection_numero_detail_commande=//table[@class='liste_informations']/tbody/tr[4]/td[2]/span[starts-with(text(),'$id$')]
+# Detection du numéro de la page actuellement affiché dans le détail d'une commande
+detection_numero_page_detail_commande=//table[@class='pagination']//a[@class='lien_noir_10'][text()='$page$']
+# aucun numéro de page sur le détail d'une commande (= une seule page, première page)
+detection_pas_de_page_detail_commande=//div[@class='main_column'][count(div)=2]
 
 # Ecran de connexion
 detection_de_chargement_de_la_page_de_connexion=//input[@type='submit']

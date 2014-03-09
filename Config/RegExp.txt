@@ -11,3 +11,5 @@ resume_commande.Remise_le.date=(?<info>\d+-\d+-\d+)
 ligne.Traitee_le.date=(?<info>\d+-\d+-\d+)
 ligne.Remise_le.date=(?<info>\d+-\d+-\d+)
 
+numero.commande.url=refCmd=(?<info>\d+)
+numero.page.commande.url=p=(?<info>\d+)

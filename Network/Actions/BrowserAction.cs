@@ -109,27 +109,15 @@ namespace Aide_Dilicom3.Network.Actions
                 threadSafeNavigate(url);
             }
 
-            int timeOut = Aide_Dilicom3.Properties.Settings.Default.Timeout * 1000;
+            String xpath = waitOnXPath(XPathListToMatch);
 
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-
-            // Loop and check browser code regularly to search for XPath expressions to match.
-            do
+            if (xpath != null)
             {
-                String xpathFound = browserHtmlContainsXPaths(XPathListToMatch);
-                if (xpathFound != null)
-                {
-                    return xpathFound;
-                }
-
-                // Sleeping a bit before next check.
-                System.Threading.Thread.Sleep(sleepTime);
-
-            } while (watch.ElapsedMilliseconds < timeOut);
+                return xpath;
+            }
 
             // If timeout is reached, reload link.
-            logger.Warn("Timeout of " + timeOut + " reached when accessing URL " + url);
+            logger.Warn("Timeout of " + (Aide_Dilicom3.Properties.Settings.Default.Timeout * 1000) + " reached when accessing URL " + url);
 
             // If max retries is reached. Throw ConnectionFailedException.
             if (retried >= Aide_Dilicom3.Properties.Settings.Default.MaxRetries)
@@ -143,6 +131,40 @@ namespace Aide_Dilicom3.Network.Actions
                 retried++;
                 return navigate(url, XPathListToMatch);
             }
+        }
+
+        protected String waitOnXPath(String XPathToMatch)
+        {
+            List<String> XPathListToMatch = new List<String>();
+            XPathListToMatch.Add(XPathToMatch);
+            return waitOnXPath(XPathListToMatch);
+        }
+
+        protected String waitOnXPath(List<String> XPathListToMatch)
+        {
+            logger.Debug("Waiting on XPath...");
+
+            int timeOut = Aide_Dilicom3.Properties.Settings.Default.Timeout * 1000;
+
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+
+            // Loop and check browser code regularly to search for XPath expressions to match.
+            do
+            {
+                String xpathFound = browserHtmlContainsXPaths(XPathListToMatch);
+                if (xpathFound != null)
+                {
+                    logger.Debug("... XPath found");
+                    return xpathFound;
+                }
+
+                // Sleeping a bit before next check.
+                System.Threading.Thread.Sleep(sleepTime);
+
+            } while (watch.ElapsedMilliseconds < timeOut);
+
+            return null;
         }
 
         private String browserHtmlContainsXPaths(List<String> xpaths)

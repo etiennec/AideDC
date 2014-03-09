@@ -68,22 +68,6 @@ namespace Aide_Dilicom3.Forms
             this.OrdersExportProgressBar = new System.Windows.Forms.ProgressBar();
             this.CommandsCount = new System.Windows.Forms.NumericUpDown();
             this.OrdersGridView = new System.Windows.Forms.DataGridView();
-            this.destinataireCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_remiseCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_envoiCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.referenceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lignesCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exemplairesCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.url_refCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isSelectedCol = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.destinataireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateenvoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateremiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.referenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lignesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exemplairesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urlrefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isSelectedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.RefreshCommandsButton = new System.Windows.Forms.Button();
@@ -107,6 +91,22 @@ namespace Aide_Dilicom3.Forms
             this.MyWebBrowser = new System.Windows.Forms.WebBrowser();
             this.saveCsvFile = new System.Windows.Forms.SaveFileDialog();
             this.openEanFile = new System.Windows.Forms.OpenFileDialog();
+            this.destinataireCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_remiseCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_envoiCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referenceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lignesCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exemplairesCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.url_refCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isSelectedCol = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.destinataireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateenvoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateremiseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lignesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exemplairesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urlrefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isSelectedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersListDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commande)).BeginInit();
             this.MainTabs.SuspendLayout();
@@ -201,9 +201,9 @@ namespace Aide_Dilicom3.Forms
             // 
             // MainTabs
             // 
-            this.MainTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainTabs.Controls.Add(this.RapidInfoTab);
             this.MainTabs.Controls.Add(this.CommandesTab);
             this.MainTabs.Controls.Add(this.ConfigTab);
@@ -213,7 +213,7 @@ namespace Aide_Dilicom3.Forms
             this.MainTabs.Margin = new System.Windows.Forms.Padding(0);
             this.MainTabs.Name = "MainTabs";
             this.MainTabs.SelectedIndex = 0;
-            this.MainTabs.Size = new System.Drawing.Size(976, 728);
+            this.MainTabs.Size = new System.Drawing.Size(1301, 896);
             this.MainTabs.TabIndex = 0;
             // 
             // RapidInfoTab
@@ -225,17 +225,18 @@ namespace Aide_Dilicom3.Forms
             this.RapidInfoTab.Controls.Add(this.AddingPanelLabel);
             this.RapidInfoTab.Controls.Add(this.importEanButton);
             this.RapidInfoTab.Controls.Add(this.EanListGridView);
-            this.RapidInfoTab.Location = new System.Drawing.Point(4, 33);
+            this.RapidInfoTab.Location = new System.Drawing.Point(4, 38);
+            this.RapidInfoTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RapidInfoTab.Name = "RapidInfoTab";
-            this.RapidInfoTab.Size = new System.Drawing.Size(968, 691);
+            this.RapidInfoTab.Size = new System.Drawing.Size(1293, 854);
             this.RapidInfoTab.TabIndex = 6;
             this.RapidInfoTab.Text = "Rapid\'Info";
             this.RapidInfoTab.UseVisualStyleBackColor = true;
             // 
             // EanAdditionalColumnsGridView
             // 
-            this.EanAdditionalColumnsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.EanAdditionalColumnsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EanAdditionalColumnsGridView.AutoGenerateColumns = false;
             this.EanAdditionalColumnsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EanAdditionalColumnsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,9 +245,10 @@ namespace Aide_Dilicom3.Forms
             this.colEnabledDataGridViewCheckBoxColumn});
             this.EanAdditionalColumnsGridView.DataMember = "AdditionalColumns";
             this.EanAdditionalColumnsGridView.DataSource = this.EanAdditionalFieldsDS;
-            this.EanAdditionalColumnsGridView.Location = new System.Drawing.Point(292, 122);
+            this.EanAdditionalColumnsGridView.Location = new System.Drawing.Point(389, 150);
+            this.EanAdditionalColumnsGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EanAdditionalColumnsGridView.Name = "EanAdditionalColumnsGridView";
-            this.EanAdditionalColumnsGridView.Size = new System.Drawing.Size(652, 297);
+            this.EanAdditionalColumnsGridView.Size = new System.Drawing.Size(869, 366);
             this.EanAdditionalColumnsGridView.TabIndex = 10;
             this.EanAdditionalColumnsGridView.Validated += new System.EventHandler(this.dataGridView1_Validated);
             // 
@@ -256,7 +258,7 @@ namespace Aide_Dilicom3.Forms
             this.colNameDataGridViewTextBoxColumn.DataPropertyName = "ColName";
             this.colNameDataGridViewTextBoxColumn.HeaderText = "Nom";
             this.colNameDataGridViewTextBoxColumn.Name = "colNameDataGridViewTextBoxColumn";
-            this.colNameDataGridViewTextBoxColumn.Width = 76;
+            this.colNameDataGridViewTextBoxColumn.Width = 90;
             // 
             // colFormulaDataGridViewTextBoxColumn
             // 
@@ -264,7 +266,7 @@ namespace Aide_Dilicom3.Forms
             this.colFormulaDataGridViewTextBoxColumn.DataPropertyName = "ColFormula";
             this.colFormulaDataGridViewTextBoxColumn.HeaderText = "Formule";
             this.colFormulaDataGridViewTextBoxColumn.Name = "colFormulaDataGridViewTextBoxColumn";
-            this.colFormulaDataGridViewTextBoxColumn.Width = 106;
+            this.colFormulaDataGridViewTextBoxColumn.Width = 128;
             // 
             // colEnabledDataGridViewCheckBoxColumn
             // 
@@ -272,7 +274,7 @@ namespace Aide_Dilicom3.Forms
             this.colEnabledDataGridViewCheckBoxColumn.DataPropertyName = "ColEnabled";
             this.colEnabledDataGridViewCheckBoxColumn.HeaderText = "Inclure";
             this.colEnabledDataGridViewCheckBoxColumn.Name = "colEnabledDataGridViewCheckBoxColumn";
-            this.colEnabledDataGridViewCheckBoxColumn.Width = 73;
+            this.colEnabledDataGridViewCheckBoxColumn.Width = 91;
             // 
             // EanAdditionalFieldsDS
             // 
@@ -308,9 +310,10 @@ namespace Aide_Dilicom3.Forms
             // 
             // deleteEanButton
             // 
-            this.deleteEanButton.Location = new System.Drawing.Point(17, 45);
+            this.deleteEanButton.Location = new System.Drawing.Point(23, 55);
+            this.deleteEanButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteEanButton.Name = "deleteEanButton";
-            this.deleteEanButton.Size = new System.Drawing.Size(248, 32);
+            this.deleteEanButton.Size = new System.Drawing.Size(331, 39);
             this.deleteEanButton.TabIndex = 9;
             this.deleteEanButton.Text = "Effacer tous les codes EAN";
             this.deleteEanButton.UseVisualStyleBackColor = true;
@@ -319,16 +322,18 @@ namespace Aide_Dilicom3.Forms
             // EanExportProgressBar
             // 
             this.EanExportProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.EanExportProgressBar.Location = new System.Drawing.Point(476, 45);
+            this.EanExportProgressBar.Location = new System.Drawing.Point(635, 55);
+            this.EanExportProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EanExportProgressBar.Name = "EanExportProgressBar";
-            this.EanExportProgressBar.Size = new System.Drawing.Size(469, 23);
+            this.EanExportProgressBar.Size = new System.Drawing.Size(625, 28);
             this.EanExportProgressBar.TabIndex = 8;
             // 
             // EanExportCSVButton
             // 
-            this.EanExportCSVButton.Location = new System.Drawing.Point(562, 5);
+            this.EanExportCSVButton.Location = new System.Drawing.Point(749, 6);
+            this.EanExportCSVButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EanExportCSVButton.Name = "EanExportCSVButton";
-            this.EanExportCSVButton.Size = new System.Drawing.Size(199, 34);
+            this.EanExportCSVButton.Size = new System.Drawing.Size(265, 42);
             this.EanExportCSVButton.TabIndex = 7;
             this.EanExportCSVButton.Text = "Exporter en CSV";
             this.EanExportCSVButton.UseVisualStyleBackColor = true;
@@ -337,17 +342,19 @@ namespace Aide_Dilicom3.Forms
             // AddingPanelLabel
             // 
             this.AddingPanelLabel.AutoSize = true;
-            this.AddingPanelLabel.Location = new System.Drawing.Point(288, 89);
+            this.AddingPanelLabel.Location = new System.Drawing.Point(384, 110);
+            this.AddingPanelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AddingPanelLabel.Name = "AddingPanelLabel";
-            this.AddingPanelLabel.Size = new System.Drawing.Size(345, 24);
+            this.AddingPanelLabel.Size = new System.Drawing.Size(439, 29);
             this.AddingPanelLabel.TabIndex = 4;
-            this.AddingPanelLabel.Text = "Colonnes suppl¨¦mentaires pour l\'export";
+            this.AddingPanelLabel.Text = "Colonnes supplémentaires pour l\'export";
             // 
             // importEanButton
             // 
-            this.importEanButton.Location = new System.Drawing.Point(17, 4);
+            this.importEanButton.Location = new System.Drawing.Point(23, 5);
+            this.importEanButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.importEanButton.Name = "importEanButton";
-            this.importEanButton.Size = new System.Drawing.Size(248, 35);
+            this.importEanButton.Size = new System.Drawing.Size(331, 43);
             this.importEanButton.TabIndex = 1;
             this.importEanButton.Text = "Importer Fichiers EAN";
             this.importEanButton.UseVisualStyleBackColor = true;
@@ -356,8 +363,8 @@ namespace Aide_Dilicom3.Forms
             // EanListGridView
             // 
             this.EanListGridView.AllowUserToOrderColumns = true;
-            this.EanListGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.EanListGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.EanListGridView.AutoGenerateColumns = false;
             this.EanListGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.EanListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -368,9 +375,10 @@ namespace Aide_Dilicom3.Forms
             this.isEanSelectedDataGridViewCheckBoxColumn});
             this.EanListGridView.DataMember = "EanList";
             this.EanListGridView.DataSource = this.EanListDS;
-            this.EanListGridView.Location = new System.Drawing.Point(17, 83);
+            this.EanListGridView.Location = new System.Drawing.Point(23, 102);
+            this.EanListGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EanListGridView.Name = "EanListGridView";
-            this.EanListGridView.Size = new System.Drawing.Size(248, 447);
+            this.EanListGridView.Size = new System.Drawing.Size(331, 550);
             this.EanListGridView.TabIndex = 0;
             this.EanListGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             this.EanListGridView.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.EanListGridView_RowValidating);
@@ -390,7 +398,7 @@ namespace Aide_Dilicom3.Forms
             this.dataGridViewTextBoxColumn1.HeaderText = "Code EAN";
             this.dataGridViewTextBoxColumn1.MaxInputLength = 13;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 126;
+            this.dataGridViewTextBoxColumn1.Width = 152;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -398,7 +406,7 @@ namespace Aide_Dilicom3.Forms
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "isEanSelected";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Oui";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 46;
+            this.dataGridViewCheckBoxColumn1.Width = 57;
             // 
             // isEanSelectedDataGridViewCheckBoxColumn
             // 
@@ -444,10 +452,11 @@ namespace Aide_Dilicom3.Forms
             this.CommandesTab.Controls.Add(this.CommandsCount);
             this.CommandesTab.Controls.Add(this.OrdersGridView);
             this.CommandesTab.Controls.Add(this.panel1);
-            this.CommandesTab.Location = new System.Drawing.Point(4, 33);
+            this.CommandesTab.Location = new System.Drawing.Point(4, 38);
+            this.CommandesTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommandesTab.Name = "CommandesTab";
-            this.CommandesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CommandesTab.Size = new System.Drawing.Size(968, 691);
+            this.CommandesTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CommandesTab.Size = new System.Drawing.Size(1293, 854);
             this.CommandesTab.TabIndex = 2;
             this.CommandesTab.Text = "Commandes";
             this.CommandesTab.UseVisualStyleBackColor = true;
@@ -455,9 +464,10 @@ namespace Aide_Dilicom3.Forms
             // ExportCsvButton
             // 
             this.ExportCsvButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExportCsvButton.Location = new System.Drawing.Point(833, 0);
+            this.ExportCsvButton.Location = new System.Drawing.Point(1111, 0);
+            this.ExportCsvButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExportCsvButton.Name = "ExportCsvButton";
-            this.ExportCsvButton.Size = new System.Drawing.Size(120, 29);
+            this.ExportCsvButton.Size = new System.Drawing.Size(160, 36);
             this.ExportCsvButton.TabIndex = 7;
             this.ExportCsvButton.Text = "Export CSV";
             this.ExportCsvButton.UseVisualStyleBackColor = true;
@@ -466,21 +476,23 @@ namespace Aide_Dilicom3.Forms
             // OrdersExportProgressBar
             // 
             this.OrdersExportProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrdersExportProgressBar.Location = new System.Drawing.Point(683, 31);
+            this.OrdersExportProgressBar.Location = new System.Drawing.Point(911, 38);
+            this.OrdersExportProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrdersExportProgressBar.Name = "OrdersExportProgressBar";
-            this.OrdersExportProgressBar.Size = new System.Drawing.Size(270, 23);
+            this.OrdersExportProgressBar.Size = new System.Drawing.Size(360, 28);
             this.OrdersExportProgressBar.TabIndex = 6;
             // 
             // CommandsCount
             // 
-            this.CommandsCount.Location = new System.Drawing.Point(342, 15);
+            this.CommandsCount.Location = new System.Drawing.Point(456, 18);
+            this.CommandsCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommandsCount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.CommandsCount.Name = "CommandsCount";
-            this.CommandsCount.Size = new System.Drawing.Size(68, 29);
+            this.CommandsCount.Size = new System.Drawing.Size(91, 34);
             this.CommandsCount.TabIndex = 3;
             this.CommandsCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.CommandsCount.Value = new decimal(new int[] {
@@ -495,9 +507,9 @@ namespace Aide_Dilicom3.Forms
             this.OrdersGridView.AllowUserToAddRows = false;
             this.OrdersGridView.AllowUserToDeleteRows = false;
             this.OrdersGridView.AllowUserToOrderColumns = true;
-            this.OrdersGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrdersGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrdersGridView.AutoGenerateColumns = false;
             this.OrdersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.OrdersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -520,168 +532,40 @@ namespace Aide_Dilicom3.Forms
             this.isSelectedDataGridViewCheckBoxColumn});
             this.OrdersGridView.DataMember = "commande";
             this.OrdersGridView.DataSource = this.OrdersListDS;
-            this.OrdersGridView.Location = new System.Drawing.Point(16, 56);
+            this.OrdersGridView.Location = new System.Drawing.Point(21, 69);
+            this.OrdersGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrdersGridView.Name = "OrdersGridView";
             this.OrdersGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.OrdersGridView.Size = new System.Drawing.Size(937, 474);
+            this.OrdersGridView.Size = new System.Drawing.Size(1249, 583);
             this.OrdersGridView.TabIndex = 1;
-            // 
-            // destinataireCol
-            // 
-            this.destinataireCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.destinataireCol.DataPropertyName = "destinataire";
-            this.destinataireCol.HeaderText = "Destinataire";
-            this.destinataireCol.Name = "destinataireCol";
-            this.destinataireCol.Width = 132;
-            // 
-            // date_remiseCol
-            // 
-            this.date_remiseCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.date_remiseCol.DataPropertyName = "date_remise";
-            this.date_remiseCol.HeaderText = "Remis le";
-            this.date_remiseCol.Name = "date_remiseCol";
-            this.date_remiseCol.Width = 108;
-            // 
-            // date_envoiCol
-            // 
-            this.date_envoiCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.date_envoiCol.DataPropertyName = "date_envoi";
-            this.date_envoiCol.HeaderText = "Envoy¨¦ le";
-            this.date_envoiCol.Name = "date_envoiCol";
-            this.date_envoiCol.Width = 119;
-            // 
-            // referenceCol
-            // 
-            this.referenceCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.referenceCol.DataPropertyName = "reference";
-            this.referenceCol.HeaderText = "R¨¦f.";
-            this.referenceCol.Name = "referenceCol";
-            this.referenceCol.Width = 68;
-            // 
-            // lignesCol
-            // 
-            this.lignesCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.lignesCol.DataPropertyName = "lignes";
-            this.lignesCol.HeaderText = "Lignes";
-            this.lignesCol.Name = "lignesCol";
-            this.lignesCol.Width = 91;
-            // 
-            // exemplairesCol
-            // 
-            this.exemplairesCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.exemplairesCol.DataPropertyName = "exemplaires";
-            this.exemplairesCol.HeaderText = "Ex.";
-            this.exemplairesCol.Name = "exemplairesCol";
-            this.exemplairesCol.Width = 63;
-            // 
-            // url_refCol
-            // 
-            this.url_refCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.url_refCol.DataPropertyName = "url_ref";
-            this.url_refCol.HeaderText = "url_ref";
-            this.url_refCol.Name = "url_refCol";
-            this.url_refCol.Visible = false;
-            // 
-            // isSelectedCol
-            // 
-            this.isSelectedCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.isSelectedCol.DataPropertyName = "isSelected";
-            this.isSelectedCol.FalseValue = "false";
-            this.isSelectedCol.HeaderText = "Oui";
-            this.isSelectedCol.IndeterminateValue = "false";
-            this.isSelectedCol.Name = "isSelectedCol";
-            this.isSelectedCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.isSelectedCol.TrueValue = "true";
-            this.isSelectedCol.Width = 65;
-            // 
-            // destinataireDataGridViewTextBoxColumn
-            // 
-            this.destinataireDataGridViewTextBoxColumn.DataPropertyName = "destinataire";
-            this.destinataireDataGridViewTextBoxColumn.HeaderText = "destinataire";
-            this.destinataireDataGridViewTextBoxColumn.Name = "destinataireDataGridViewTextBoxColumn";
-            this.destinataireDataGridViewTextBoxColumn.Visible = false;
-            this.destinataireDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // dateenvoiDataGridViewTextBoxColumn
-            // 
-            this.dateenvoiDataGridViewTextBoxColumn.DataPropertyName = "date_envoi";
-            this.dateenvoiDataGridViewTextBoxColumn.HeaderText = "date_envoi";
-            this.dateenvoiDataGridViewTextBoxColumn.Name = "dateenvoiDataGridViewTextBoxColumn";
-            this.dateenvoiDataGridViewTextBoxColumn.Visible = false;
-            this.dateenvoiDataGridViewTextBoxColumn.Width = 127;
-            // 
-            // dateremiseDataGridViewTextBoxColumn
-            // 
-            this.dateremiseDataGridViewTextBoxColumn.DataPropertyName = "date_remise";
-            this.dateremiseDataGridViewTextBoxColumn.HeaderText = "date_remise";
-            this.dateremiseDataGridViewTextBoxColumn.Name = "dateremiseDataGridViewTextBoxColumn";
-            this.dateremiseDataGridViewTextBoxColumn.Visible = false;
-            this.dateremiseDataGridViewTextBoxColumn.Width = 138;
-            // 
-            // referenceDataGridViewTextBoxColumn
-            // 
-            this.referenceDataGridViewTextBoxColumn.DataPropertyName = "reference";
-            this.referenceDataGridViewTextBoxColumn.HeaderText = "reference";
-            this.referenceDataGridViewTextBoxColumn.Name = "referenceDataGridViewTextBoxColumn";
-            this.referenceDataGridViewTextBoxColumn.Visible = false;
-            this.referenceDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // lignesDataGridViewTextBoxColumn
-            // 
-            this.lignesDataGridViewTextBoxColumn.DataPropertyName = "lignes";
-            this.lignesDataGridViewTextBoxColumn.HeaderText = "lignes";
-            this.lignesDataGridViewTextBoxColumn.Name = "lignesDataGridViewTextBoxColumn";
-            this.lignesDataGridViewTextBoxColumn.Visible = false;
-            this.lignesDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // exemplairesDataGridViewTextBoxColumn
-            // 
-            this.exemplairesDataGridViewTextBoxColumn.DataPropertyName = "exemplaires";
-            this.exemplairesDataGridViewTextBoxColumn.HeaderText = "exemplaires";
-            this.exemplairesDataGridViewTextBoxColumn.Name = "exemplairesDataGridViewTextBoxColumn";
-            this.exemplairesDataGridViewTextBoxColumn.Visible = false;
-            this.exemplairesDataGridViewTextBoxColumn.Width = 138;
-            // 
-            // urlrefDataGridViewTextBoxColumn
-            // 
-            this.urlrefDataGridViewTextBoxColumn.DataPropertyName = "url_ref";
-            this.urlrefDataGridViewTextBoxColumn.HeaderText = "url_ref";
-            this.urlrefDataGridViewTextBoxColumn.Name = "urlrefDataGridViewTextBoxColumn";
-            this.urlrefDataGridViewTextBoxColumn.Visible = false;
-            this.urlrefDataGridViewTextBoxColumn.Width = 87;
-            // 
-            // isSelectedDataGridViewCheckBoxColumn
-            // 
-            this.isSelectedDataGridViewCheckBoxColumn.DataPropertyName = "isSelected";
-            this.isSelectedDataGridViewCheckBoxColumn.HeaderText = "isSelected";
-            this.isSelectedDataGridViewCheckBoxColumn.Name = "isSelectedDataGridViewCheckBoxColumn";
-            this.isSelectedDataGridViewCheckBoxColumn.Visible = false;
-            this.isSelectedDataGridViewCheckBoxColumn.Width = 103;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.RefreshCommandsButton);
-            this.panel1.Location = new System.Drawing.Point(16, 9);
+            this.panel1.Location = new System.Drawing.Point(21, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(452, 41);
+            this.panel1.Size = new System.Drawing.Size(602, 50);
             this.panel1.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(399, 7);
+            this.label2.Location = new System.Drawing.Point(532, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 24);
+            this.label2.Size = new System.Drawing.Size(65, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "com.";
             // 
             // RefreshCommandsButton
             // 
-            this.RefreshCommandsButton.Location = new System.Drawing.Point(8, 5);
+            this.RefreshCommandsButton.Location = new System.Drawing.Point(11, 6);
+            this.RefreshCommandsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RefreshCommandsButton.Name = "RefreshCommandsButton";
-            this.RefreshCommandsButton.Size = new System.Drawing.Size(311, 29);
+            this.RefreshCommandsButton.Size = new System.Drawing.Size(415, 36);
             this.RefreshCommandsButton.TabIndex = 0;
             this.RefreshCommandsButton.Text = "Rafraichir la Liste des Commandes";
             this.RefreshCommandsButton.UseVisualStyleBackColor = true;
@@ -702,10 +586,11 @@ namespace Aide_Dilicom3.Forms
             this.ConfigTab.Controls.Add(this.label4);
             this.ConfigTab.Controls.Add(this.label3);
             this.ConfigTab.Controls.Add(this.label1);
-            this.ConfigTab.Location = new System.Drawing.Point(4, 33);
+            this.ConfigTab.Location = new System.Drawing.Point(4, 38);
+            this.ConfigTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ConfigTab.Name = "ConfigTab";
-            this.ConfigTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ConfigTab.Size = new System.Drawing.Size(968, 691);
+            this.ConfigTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ConfigTab.Size = new System.Drawing.Size(1293, 854);
             this.ConfigTab.TabIndex = 5;
             this.ConfigTab.Text = "Config";
             this.ConfigTab.UseVisualStyleBackColor = true;
@@ -713,143 +598,159 @@ namespace Aide_Dilicom3.Forms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(492, 188);
+            this.label8.Location = new System.Drawing.Point(656, 231);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 24);
+            this.label8.Size = new System.Drawing.Size(118, 29);
             this.label8.TabIndex = 8;
             this.label8.Text = "secondes";
             // 
             // timeoutSelector
             // 
-            this.timeoutSelector.Location = new System.Drawing.Point(440, 186);
+            this.timeoutSelector.Location = new System.Drawing.Point(587, 229);
+            this.timeoutSelector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timeoutSelector.Name = "timeoutSelector";
-            this.timeoutSelector.Size = new System.Drawing.Size(55, 29);
+            this.timeoutSelector.Size = new System.Drawing.Size(73, 34);
             this.timeoutSelector.TabIndex = 7;
             this.timeoutSelector.Leave += new System.EventHandler(this.saveSettings);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 188);
+            this.label7.Location = new System.Drawing.Point(35, 231);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(408, 24);
+            this.label7.Size = new System.Drawing.Size(515, 29);
             this.label7.TabIndex = 6;
-            this.label7.Text = "D¨¦lai avant de retenter une connexion inactive :";
+            this.label7.Text = "Délai avant de retenter une connexion inactive :";
             // 
             // textCsvReplacement
             // 
-            this.textCsvReplacement.Location = new System.Drawing.Point(352, 140);
+            this.textCsvReplacement.Location = new System.Drawing.Point(469, 172);
+            this.textCsvReplacement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCsvReplacement.Name = "textCsvReplacement";
-            this.textCsvReplacement.Size = new System.Drawing.Size(30, 29);
+            this.textCsvReplacement.Size = new System.Drawing.Size(39, 34);
             this.textCsvReplacement.TabIndex = 5;
             this.textCsvReplacement.Leave += new System.EventHandler(this.saveSettings);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(211, 143);
+            this.label6.Location = new System.Drawing.Point(281, 176);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 24);
+            this.label6.Size = new System.Drawing.Size(178, 29);
             this.label6.TabIndex = 4;
             this.label6.Text = "Remplacer par:";
             // 
             // textCsvSeparator
             // 
-            this.textCsvSeparator.Location = new System.Drawing.Point(182, 140);
+            this.textCsvSeparator.Location = new System.Drawing.Point(243, 172);
+            this.textCsvSeparator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textCsvSeparator.Name = "textCsvSeparator";
-            this.textCsvSeparator.Size = new System.Drawing.Size(30, 29);
+            this.textCsvSeparator.Size = new System.Drawing.Size(39, 34);
             this.textCsvSeparator.TabIndex = 5;
             this.textCsvSeparator.Leave += new System.EventHandler(this.saveSettings);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 143);
+            this.label5.Location = new System.Drawing.Point(35, 176);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 24);
+            this.label5.Size = new System.Drawing.Size(192, 29);
             this.label5.TabIndex = 4;
-            this.label5.Text = "S¨¦parateur CSV:";
+            this.label5.Text = "Séparateur CSV:";
             // 
             // textWebBaseUrl
             // 
-            this.textWebBaseUrl.Location = new System.Drawing.Point(224, 93);
+            this.textWebBaseUrl.Location = new System.Drawing.Point(299, 114);
+            this.textWebBaseUrl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textWebBaseUrl.Name = "textWebBaseUrl";
-            this.textWebBaseUrl.Size = new System.Drawing.Size(383, 29);
+            this.textWebBaseUrl.Size = new System.Drawing.Size(509, 34);
             this.textWebBaseUrl.TabIndex = 3;
             this.textWebBaseUrl.Leave += new System.EventHandler(this.saveSettings);
             this.textWebBaseUrl.Validating += new System.ComponentModel.CancelEventHandler(this.textWebBaseUrl_Validating);
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(164, 55);
+            this.textPassword.Location = new System.Drawing.Point(219, 68);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(189, 29);
+            this.textPassword.Size = new System.Drawing.Size(251, 34);
             this.textPassword.TabIndex = 3;
             this.textPassword.UseSystemPasswordChar = true;
             this.textPassword.Leave += new System.EventHandler(this.saveSettings);
             // 
             // textLogin
             // 
-            this.textLogin.Location = new System.Drawing.Point(164, 14);
+            this.textLogin.Location = new System.Drawing.Point(219, 17);
+            this.textLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textLogin.Name = "textLogin";
-            this.textLogin.Size = new System.Drawing.Size(189, 29);
+            this.textLogin.Size = new System.Drawing.Size(251, 34);
             this.textLogin.TabIndex = 2;
             this.textLogin.Leave += new System.EventHandler(this.saveSettings);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 96);
+            this.label4.Location = new System.Drawing.Point(29, 118);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 24);
+            this.label4.Size = new System.Drawing.Size(245, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "Adresse site Dilicom :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 58);
+            this.label3.Location = new System.Drawing.Point(29, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 24);
+            this.label3.Size = new System.Drawing.Size(170, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mot de passe :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 17);
+            this.label1.Location = new System.Drawing.Point(29, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 24);
+            this.label1.Size = new System.Drawing.Size(171, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Code d\'acc¨¨s :";
+            this.label1.Text = "Code d\'accès :";
             // 
             // NavigoTab
             // 
             this.NavigoTab.Controls.Add(this.UrlText);
             this.NavigoTab.Controls.Add(this.GoButton);
             this.NavigoTab.Controls.Add(this.MyWebBrowser);
-            this.NavigoTab.Location = new System.Drawing.Point(4, 33);
+            this.NavigoTab.Location = new System.Drawing.Point(4, 38);
+            this.NavigoTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NavigoTab.Name = "NavigoTab";
-            this.NavigoTab.Size = new System.Drawing.Size(968, 691);
+            this.NavigoTab.Size = new System.Drawing.Size(1293, 854);
             this.NavigoTab.TabIndex = 7;
             this.NavigoTab.Text = "Navigo";
             this.NavigoTab.UseVisualStyleBackColor = true;
             // 
             // UrlText
             // 
-            this.UrlText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.UrlText.Location = new System.Drawing.Point(4, 4);
+            this.UrlText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UrlText.Location = new System.Drawing.Point(5, 5);
+            this.UrlText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UrlText.Name = "UrlText";
-            this.UrlText.Size = new System.Drawing.Size(853, 29);
+            this.UrlText.Size = new System.Drawing.Size(1136, 34);
             this.UrlText.TabIndex = 2;
             // 
             // GoButton
             // 
             this.GoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GoButton.Location = new System.Drawing.Point(863, 4);
+            this.GoButton.Location = new System.Drawing.Point(1151, 5);
+            this.GoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(75, 29);
+            this.GoButton.Size = new System.Drawing.Size(100, 36);
             this.GoButton.TabIndex = 1;
             this.GoButton.Text = "Go";
             this.GoButton.UseVisualStyleBackColor = true;
@@ -857,10 +758,11 @@ namespace Aide_Dilicom3.Forms
             // 
             // MyWebBrowser
             // 
-            this.MyWebBrowser.Location = new System.Drawing.Point(0, 39);
-            this.MyWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.MyWebBrowser.Location = new System.Drawing.Point(0, 48);
+            this.MyWebBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MyWebBrowser.MinimumSize = new System.Drawing.Size(27, 25);
             this.MyWebBrowser.Name = "MyWebBrowser";
-            this.MyWebBrowser.Size = new System.Drawing.Size(968, 491);
+            this.MyWebBrowser.Size = new System.Drawing.Size(1291, 604);
             this.MyWebBrowser.TabIndex = 0;
             this.MyWebBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.MyWebBrowser_Navigated);
             this.MyWebBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.MyWebBrowser_Navigating);
@@ -876,14 +778,148 @@ namespace Aide_Dilicom3.Forms
             this.openEanFile.InitialDirectory = ".";
             this.openEanFile.Multiselect = true;
             // 
+            // destinataireCol
+            // 
+            this.destinataireCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.destinataireCol.DataPropertyName = "destinataire";
+            this.destinataireCol.HeaderText = "Destinataire";
+            this.destinataireCol.Name = "destinataireCol";
+            this.destinataireCol.Width = 166;
+            // 
+            // date_remiseCol
+            // 
+            this.date_remiseCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.date_remiseCol.DataPropertyName = "date_remise";
+            this.date_remiseCol.HeaderText = "Remis le";
+            this.date_remiseCol.Name = "date_remiseCol";
+            this.date_remiseCol.Width = 133;
+            // 
+            // date_envoiCol
+            // 
+            this.date_envoiCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.date_envoiCol.DataPropertyName = "date_envoi";
+            this.date_envoiCol.HeaderText = "Envoyé le";
+            this.date_envoiCol.Name = "date_envoiCol";
+            this.date_envoiCol.Width = 143;
+            // 
+            // referenceCol
+            // 
+            this.referenceCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.referenceCol.DataPropertyName = "reference";
+            this.referenceCol.HeaderText = "Réf.";
+            this.referenceCol.Name = "referenceCol";
+            this.referenceCol.Width = 81;
+            // 
+            // lignesCol
+            // 
+            this.lignesCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lignesCol.DataPropertyName = "lignes";
+            this.lignesCol.HeaderText = "Lignes";
+            this.lignesCol.Name = "lignesCol";
+            this.lignesCol.Width = 110;
+            // 
+            // exemplairesCol
+            // 
+            this.exemplairesCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.exemplairesCol.DataPropertyName = "exemplaires";
+            this.exemplairesCol.HeaderText = "Ex.";
+            this.exemplairesCol.Name = "exemplairesCol";
+            this.exemplairesCol.Width = 71;
+            // 
+            // url_refCol
+            // 
+            this.url_refCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.url_refCol.DataPropertyName = "url_ref";
+            this.url_refCol.HeaderText = "url_ref";
+            this.url_refCol.Name = "url_refCol";
+            this.url_refCol.Visible = false;
+            this.url_refCol.Width = 106;
+            // 
+            // isSelectedCol
+            // 
+            this.isSelectedCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.isSelectedCol.DataPropertyName = "isSelected";
+            this.isSelectedCol.FalseValue = "false";
+            this.isSelectedCol.HeaderText = "Oui";
+            this.isSelectedCol.IndeterminateValue = "false";
+            this.isSelectedCol.Name = "isSelectedCol";
+            this.isSelectedCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.isSelectedCol.TrueValue = "true";
+            this.isSelectedCol.Width = 76;
+            // 
+            // destinataireDataGridViewTextBoxColumn
+            // 
+            this.destinataireDataGridViewTextBoxColumn.DataPropertyName = "destinataire";
+            this.destinataireDataGridViewTextBoxColumn.HeaderText = "destinataire";
+            this.destinataireDataGridViewTextBoxColumn.Name = "destinataireDataGridViewTextBoxColumn";
+            this.destinataireDataGridViewTextBoxColumn.Visible = false;
+            this.destinataireDataGridViewTextBoxColumn.Width = 163;
+            // 
+            // dateenvoiDataGridViewTextBoxColumn
+            // 
+            this.dateenvoiDataGridViewTextBoxColumn.DataPropertyName = "date_envoi";
+            this.dateenvoiDataGridViewTextBoxColumn.HeaderText = "date_envoi";
+            this.dateenvoiDataGridViewTextBoxColumn.Name = "dateenvoiDataGridViewTextBoxColumn";
+            this.dateenvoiDataGridViewTextBoxColumn.Visible = false;
+            this.dateenvoiDataGridViewTextBoxColumn.Width = 156;
+            // 
+            // dateremiseDataGridViewTextBoxColumn
+            // 
+            this.dateremiseDataGridViewTextBoxColumn.DataPropertyName = "date_remise";
+            this.dateremiseDataGridViewTextBoxColumn.HeaderText = "date_remise";
+            this.dateremiseDataGridViewTextBoxColumn.Name = "dateremiseDataGridViewTextBoxColumn";
+            this.dateremiseDataGridViewTextBoxColumn.Visible = false;
+            this.dateremiseDataGridViewTextBoxColumn.Width = 172;
+            // 
+            // referenceDataGridViewTextBoxColumn
+            // 
+            this.referenceDataGridViewTextBoxColumn.DataPropertyName = "reference";
+            this.referenceDataGridViewTextBoxColumn.HeaderText = "reference";
+            this.referenceDataGridViewTextBoxColumn.Name = "referenceDataGridViewTextBoxColumn";
+            this.referenceDataGridViewTextBoxColumn.Visible = false;
+            this.referenceDataGridViewTextBoxColumn.Width = 141;
+            // 
+            // lignesDataGridViewTextBoxColumn
+            // 
+            this.lignesDataGridViewTextBoxColumn.DataPropertyName = "lignes";
+            this.lignesDataGridViewTextBoxColumn.HeaderText = "lignes";
+            this.lignesDataGridViewTextBoxColumn.Name = "lignesDataGridViewTextBoxColumn";
+            this.lignesDataGridViewTextBoxColumn.Visible = false;
+            this.lignesDataGridViewTextBoxColumn.Width = 103;
+            // 
+            // exemplairesDataGridViewTextBoxColumn
+            // 
+            this.exemplairesDataGridViewTextBoxColumn.DataPropertyName = "exemplaires";
+            this.exemplairesDataGridViewTextBoxColumn.HeaderText = "exemplaires";
+            this.exemplairesDataGridViewTextBoxColumn.Name = "exemplairesDataGridViewTextBoxColumn";
+            this.exemplairesDataGridViewTextBoxColumn.Visible = false;
+            this.exemplairesDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // urlrefDataGridViewTextBoxColumn
+            // 
+            this.urlrefDataGridViewTextBoxColumn.DataPropertyName = "url_ref";
+            this.urlrefDataGridViewTextBoxColumn.HeaderText = "url_ref";
+            this.urlrefDataGridViewTextBoxColumn.Name = "urlrefDataGridViewTextBoxColumn";
+            this.urlrefDataGridViewTextBoxColumn.Visible = false;
+            this.urlrefDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // isSelectedDataGridViewCheckBoxColumn
+            // 
+            this.isSelectedDataGridViewCheckBoxColumn.DataPropertyName = "isSelected";
+            this.isSelectedDataGridViewCheckBoxColumn.HeaderText = "isSelected";
+            this.isSelectedDataGridViewCheckBoxColumn.Name = "isSelectedDataGridViewCheckBoxColumn";
+            this.isSelectedDataGridViewCheckBoxColumn.Visible = false;
+            this.isSelectedDataGridViewCheckBoxColumn.Width = 133;
+            // 
             // DilicomForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 566);
+            this.ClientSize = new System.Drawing.Size(1301, 697);
             this.Controls.Add(this.MainTabs);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DilicomForm";
-            this.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 62, 0, 0);
             this.Text = "Aide Dilicom";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ApplicationClosed);
             this.Load += new System.EventHandler(this.ApplicationLoad);
@@ -951,22 +987,6 @@ namespace Aide_Dilicom3.Forms
         private System.Windows.Forms.Button EanExportCSVButton;
         private System.Windows.Forms.ProgressBar EanExportProgressBar;
         private System.Windows.Forms.Button deleteEanButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinataireCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_remiseCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_envoiCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn referenceCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lignesCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exemplairesCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn url_refCol;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isSelectedCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinataireDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateenvoiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateremiseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn referenceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lignesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exemplairesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urlrefDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isSelectedDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.TextBox textLogin;
         private System.Windows.Forms.Label label3;
@@ -993,6 +1013,22 @@ namespace Aide_Dilicom3.Forms
         private System.Windows.Forms.WebBrowser MyWebBrowser;
         private System.Windows.Forms.TextBox UrlText;
         private System.Windows.Forms.Button GoButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinataireCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_remiseCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_envoiCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referenceCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lignesCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exemplairesCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn url_refCol;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isSelectedCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinataireDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateenvoiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateremiseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referenceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lignesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exemplairesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urlrefDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isSelectedDataGridViewCheckBoxColumn;
     }
 }
 
